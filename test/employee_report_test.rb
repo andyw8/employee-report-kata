@@ -17,6 +17,8 @@ class EmployeeReportTest < ActiveSupport::TestCase
 
     assert_includes result, sepp
     assert_includes result, mike
+    assert_not_includes result, nina
+    assert_not_includes result, max
   end
 
   test "employee list is ordered reverse alphabetically" do
