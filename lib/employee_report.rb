@@ -26,15 +26,8 @@ class EmployeeReport
   end
 
   def over_18
-    # as_capitalized(employees_by_name).select { |employee| employee[:age] >= 18 }
     employees_by_name.select { |employee| employee.age >= 18 }
   end
-
-  # def as_capitalized(employees)
-  #   employees.map do |e|
-  #     e.merge(name: e[:name].upcase)
-  #   end
-  # end
 
   private
 
