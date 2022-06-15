@@ -1,0 +1,9 @@
+{
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "github.copilot.enable": {
+    "*": false
+  }
+}

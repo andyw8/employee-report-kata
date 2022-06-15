@@ -1,0 +1,29 @@
+name: kata-template
+
+type: ruby
+
+up:
+  - ruby:
+      version: 3.1.0
+      gems:
+        - solargraph
+  - bundler:
+      config:
+        BUNDLE_IGNORE_MESSAGES: 1
+
+env:
+  DEV_NO_AUTO_UPDATE: "1"
+
+commands:
+  test:
+    run: |
+      export DEV_NO_AUTO_UPDATE=1
+      if [[ $# -eq 0 ]]; then
+        bundle exec rake test
+      else
+        bundle exec m "$@"
+      fi
+  lint: |
+    export DEV_NO_AUTO_UPDATE=1
+    bundle exec rubocop
+  tcr: (bundle exec rake test && git add --all && git commit -am "WIP (Test-Commit-Revert)") || git reset --hard
