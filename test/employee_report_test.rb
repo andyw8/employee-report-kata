@@ -39,6 +39,6 @@ class EmployeeReportTest < ActiveSupport::TestCase
 
     result = employee_report.over_18
 
-    assert_includes result.sole.name, "SEPP"
+    assert_equal "SEPP", result.sole.name
   end
 end
