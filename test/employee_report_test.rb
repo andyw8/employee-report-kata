@@ -1,7 +1,7 @@
 require "test_helper"
-require "project"
+require "employee_report"
 
-class ProjectTest < ActiveSupport::TestCase
+class EmployeeReportTest < ActiveSupport::TestCase
   test "example" do
     assert true, "Example passes, tests are executing correctly"
   end
