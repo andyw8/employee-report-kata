@@ -20,8 +20,8 @@ class EmployeeReportTest < ActiveSupport::TestCase
   end
 
   test "employee list is ordered reverse alphabetically" do
-    sepp = Employee.new("Sepp", 18)
     mike = Employee.new("Mike", 51)
+    sepp = Employee.new("Sepp", 18)
 
     employees = [
       sepp, mike
